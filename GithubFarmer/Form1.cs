@@ -58,7 +58,10 @@ namespace GithubFarmer
 
         private void WriteLog(string type, string text)
         {
-            listBoxLog.Items.Insert(0, $"[{type}]{"".PadRight(10)} {text}");
+            listBoxLog.Items.Add($"{$" [{type}] ".PadRight(15)} {text}");
+
+            listBoxLog.SelectedIndex = listBoxLog.Items.Count - 1;
+            listBoxLog.SelectedIndex = -1;
         }
     }
 }

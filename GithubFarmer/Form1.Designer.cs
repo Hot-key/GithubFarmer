@@ -70,18 +70,20 @@
             // 
             // listBoxLog
             // 
+            this.listBoxLog.Font = new System.Drawing.Font("Courier New", 9F);
             this.listBoxLog.FormattingEnabled = true;
-            this.listBoxLog.ItemHeight = 12;
+            this.listBoxLog.IntegralHeight = false;
+            this.listBoxLog.ItemHeight = 15;
             this.listBoxLog.Location = new System.Drawing.Point(10, 133);
             this.listBoxLog.Name = "listBoxLog";
-            this.listBoxLog.Size = new System.Drawing.Size(532, 136);
+            this.listBoxLog.Size = new System.Drawing.Size(722, 250);
             this.listBoxLog.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 274);
+            this.ClientSize = new System.Drawing.Size(744, 392);
             this.Controls.Add(this.listBoxLog);
             this.Controls.Add(this.buttonLoadGit);
             this.Controls.Add(this.label1);
