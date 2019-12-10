@@ -12,11 +12,11 @@ using HtmlAgilityPack;
 
 namespace GithubFarmer
 {
-    public partial class Form1 : Form
+    public partial class FmMain : Form
     {
         HtmlWeb gitPageWeb = new HtmlWeb();
 
-        public Form1()
+        public FmMain()
         {
             InitializeComponent();
         }
@@ -39,10 +39,17 @@ namespace GithubFarmer
                     for (int j = 0; j < weekFarm.Count; j++)
                     {
                         var tmpPanel = new Panel();
-
+                       
                         tmpPanel.BackColor = ColorTranslator.FromHtml(weekFarm[j].Attributes["fill"].Value);
                         tmpPanel.Location = new Point(13 * i, 13 * j);
                         tmpPanel.Size = new Size(10, 10);
+
+                        var countLable = new Label();
+
+                        countLable.BackColor = tmpPanel.BackColor;
+                        countLable.Text = weekFarm[j].Attributes["data-count"].Value;
+                        countLable.Font = new Font("굴림", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+                        tmpPanel.Controls.Add(countLable);
 
                         panelFarm.Controls.Add(tmpPanel);
 
